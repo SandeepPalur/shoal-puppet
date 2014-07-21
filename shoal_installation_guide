@@ -1,0 +1,21 @@
+Class                                 Module
+
+Client 
+                              
+include cvmfs::client                 desalvo-cvmfs
+include shoal::client                 shoal
+
+
+Agent 
+                                
+include shoal::frontier               shoal
+include shoal::repository             shoal
+include shoal::agent                  shoal
+
+Server
+                                 
+include shoal::server_dependacies     shoal
+include erlang                        dcarley-erlang    
+include rabbitmq                      puppetlabs-stdlib and jasonc-rabbitmq
+include shoal::server                 shoal
+include shoal::host_server            shoal
