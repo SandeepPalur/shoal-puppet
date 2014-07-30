@@ -42,3 +42,8 @@ class {'shoal::agent':
 Class['shoal::frontier'] -> Class['shoal::repository'] -> Class['shoal::agent']
 EOF
 
+ip=$(GET http://169.254.169.254/latest/meta-data/public-ipv4)
+echo $ip
+sed '/external_ip =/ c external_ip = '"$ip"'' /etc/shoal/shoal_agent.conf -i
+service shoal-agent restart
+
