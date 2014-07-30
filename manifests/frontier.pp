@@ -312,9 +312,11 @@ http_access deny CONNECT !SSL_ports
 
 http_access allow NET_LOCAL
 
+acl awscloud src 172.31.0.0/16 127.0.0.1
+
+http_access allow awscloud
 
 http_access allow localhost
-
 
 http_access deny all
 
