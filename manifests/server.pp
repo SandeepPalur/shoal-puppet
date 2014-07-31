@@ -1,7 +1,7 @@
  class shoal::server{
 
   exec { 'git-shoal-server':
-    command => "git clone https://github.com/hep-gc/shoal.git",
+    command => "git clone https://github.com/SandeepPalur/shoal.git",
     cwd => "/usr",
     path => "/usr/bin",
     before => Exec["install-shoal-server"],
