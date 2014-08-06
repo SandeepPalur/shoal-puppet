@@ -1,7 +1,7 @@
 #!/bin/bash
 #This script requires puppet installed.
 #One needs to be root to apply this.
-#This script installs shoal client
+#This script installs shoal agent
 
 if [ "`whoami`" != "root" ]; then
   echo "This should be run by root"
